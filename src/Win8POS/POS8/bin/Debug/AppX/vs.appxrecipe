@@ -14,68 +14,68 @@
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\bin\Debug\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-02-25T11:29:45.791</Modified>
+      <Modified>2015-02-26T02:50:21.285</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\bin\Debug\POS8.exe">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\POS8.exe">
       <PackagePath>POS8.exe</PackagePath>
-      <Modified>2015-02-25T11:29:45.566</Modified>
+      <Modified>2015-02-26T03:07:20.672</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\DataModel\SampleData.json">
-      <PackagePath>DataModel\SampleData.json</PackagePath>
-      <Modified>2015-02-25T11:13:18.369</Modified>
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Repositories\SampleData.json">
+      <PackagePath>Repositories\SampleData.json</PackagePath>
+      <Modified>2015-02-25T11:13:18.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\LightGray.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\LightGray.png">
       <PackagePath>Assets\LightGray.png</PackagePath>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\MediumGray.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\MediumGray.png">
       <PackagePath>Assets\MediumGray.png</PackagePath>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\Assets\DarkGray.png">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Assets\DarkGray.png">
       <PackagePath>Assets\DarkGray.png</PackagePath>
       <Modified>2013-07-22T20:01:02.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\bin\Debug\App.xbf">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-02-25T11:29:45.327</Modified>
+      <Modified>2015-02-26T02:45:52.981</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\bin\Debug\ItemsPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\ItemsPage.xbf">
       <PackagePath>ItemsPage.xbf</PackagePath>
-      <Modified>2015-02-25T11:29:45.328</Modified>
+      <Modified>2015-02-26T02:45:52.984</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\bin\Debug\SplitPage.xbf">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\SplitPage.xbf">
       <PackagePath>SplitPage.xbf</PackagePath>
-      <Modified>2015-02-25T11:29:45.332</Modified>
+      <Modified>2015-02-26T03:01:02.170</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\Workspaces\POS8\POS8\bin\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-02-25T11:29:45.737</Modified>
+      <Modified>2015-02-26T02:50:21.235</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

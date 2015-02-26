@@ -1,5 +1,4 @@
 ﻿using POS8.Common;
-using POS8.Data;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -27,7 +26,7 @@ namespace POS8
     public sealed partial class SplitPage : Page
     {
         private NavigationHelper navigationHelper;
-        private ObservableDictionary defaultViewModel = new ObservableDictionary();
+        private ViewModels.SplitScreen defaultViewModel = new ViewModels.SplitScreen();
 
         /// <summary>
         /// NavigationHelper is used on each page to aid in navigation and 
@@ -41,7 +40,7 @@ namespace POS8
         /// <summary>
         /// This can be changed to a strongly typed view model.
         /// </summary>
-        public ObservableDictionary DefaultViewModel
+        public ViewModels.SplitScreen DefaultViewModel
         {
             get { return this.defaultViewModel; }
         }
@@ -64,6 +63,11 @@ namespace POS8
             // to change from showing two panes to showing a single pane
             Window.Current.SizeChanged += Window_SizeChanged;
             this.InvalidateVisualState();
+
+
+            itemListView.DataContext = this.DefaultViewModel.Orders;
+            this.DefaultViewModel.Orders.Add(new Models.Order() { Amount = 1, Confirmations = 2, Reference = "123", Created = DateTime.Now });
+
         }
 
         /// <summary>
@@ -79,29 +83,32 @@ namespace POS8
         /// session.  The state will be null the first time a page is visited.</param>
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
-            var group = await SampleDataSource.GetGroupAsync((String)e.NavigationParameter);
-            this.DefaultViewModel["Group"] = group;
-            this.DefaultViewModel["Items"] = group.Orders;
 
-            if (e.PageState == null)
-            {
-                this.itemListView.SelectedItem = null;
-                // When this is a new page, select the first item automatically unless logical page
-                // navigation is being used (see the logical page navigation #region below.)
-                if (!this.UsingLogicalPageNavigation() && this.itemsViewSource.View != null)
-                {
-                    this.itemsViewSource.View.MoveCurrentToFirst();
-                }
-            }
-            else
-            {
-                // Restore the previously saved state associated with this page
-                if (e.PageState.ContainsKey("SelectedItem") && this.itemsViewSource.View != null)
-                {
-                    var selectedItem = await SampleDataSource.GetItemAsync((String)e.PageState["SelectedItem"]);
-                    this.itemsViewSource.View.MoveCurrentTo(selectedItem);
-                }
-            }
+            this.DefaultViewModel.Orders.Add(new Models.Order() { Amount = 1, Confirmations = 2, Reference = "123", Created = DateTime.Now });
+
+            //var group = await SampleDataSource.GetGroupAsync((String)e.NavigationParameter);
+            //this.DefaultViewModel["Group"] = group;
+            //this.DefaultViewModel["Items"] = group.Orders;
+
+            //if (e.PageState == null)
+            //{
+            //    this.itemListView.SelectedItem = null;
+            //    // When this is a new page, select the first item automatically unless logical page
+            //    // navigation is being used (see the logical page navigation #region below.)
+            //    if (!this.UsingLogicalPageNavigation() && this.itemsViewSource.View != null)
+            //    {
+            //        this.itemsViewSource.View.MoveCurrentToFirst();
+            //    }
+            //}
+            //else
+            //{
+            //    // Restore the previously saved state associated with this page
+            //    if (e.PageState.ContainsKey("SelectedItem") && this.itemsViewSource.View != null)
+            //    {
+            //        var selectedItem = await SampleDataSource.GetItemAsync((String)e.PageState["SelectedItem"]);
+            //        this.itemsViewSource.View.MoveCurrentTo(selectedItem);
+            //    }
+            //}
         }
 
         /// <summary>
@@ -119,8 +126,8 @@ namespace POS8
         {
             if (this.itemsViewSource.View != null)
             {
-                var selectedItem = (DataModel.Order)this.itemsViewSource.View.CurrentItem;
-                if (selectedItem != null) e.PageState["SelectedItem"] = selectedItem.Reference;
+                //var selectedItem = (DataModel.Order)this.itemsViewSource.View.CurrentItem;
+                //if (selectedItem != null) e.PageState["SelectedItem"] = selectedItem.Reference;
             }
         }
 

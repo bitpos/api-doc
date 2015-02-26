@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace POS8.DataModel
+namespace POS8.Models
 {
     public class BitPOSSettings : ISettings
     {

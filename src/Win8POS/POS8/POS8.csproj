@@ -103,19 +103,18 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="DataModel\ISettings.cs" />
-    <Compile Include="DataModel\Order.cs" />
-    <Compile Include="DataModel\BitPOSSettings.cs" />
-    <Compile Include="DataModel\SampleDataGroup.cs" />
+    <Compile Include="Models\ISettings.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\BitPOSSettings.cs" />
     <Compile Include="ItemsPage.xaml.cs">
       <DependentUpon>ItemsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Repositories\LocalDB.cs" />
     <Compile Include="SplitPage.xaml.cs">
       <DependentUpon>SplitPage.xaml</DependentUpon>
     </Compile>
@@ -125,6 +124,7 @@
     <Compile Include="Common\ObservableDictionary.cs" />
     <Compile Include="Common\NavigationHelper.cs" />
     <Compile Include="Common\SuspensionManager.cs" />
+    <Compile Include="ViewModels\SplitScreen.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -132,7 +132,7 @@
     </AppxManifest>
     <None Include="Common\ReadMe.txt" />
     <None Include="POS8_TemporaryKey.pfx" />
-    <Content Include="DataModel\SampleData.json" />
+    <Content Include="Repositories\SampleData.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Logo.scale-100.png" />

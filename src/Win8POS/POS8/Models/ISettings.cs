@@ -1,5 +1,6 @@
 ﻿using System;
-namespace POS8.DataModel
+
+namespace POS8.Models
 {
     public interface ISettings
     {

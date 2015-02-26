@@ -1,5 +1,5 @@
 ﻿using POS8.Common;
-using POS8.Data;
+using POS8.DataModel;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -67,8 +67,8 @@ namespace POS8
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
             // TODO: Create an appropriate data model for your problem domain to replace the sample data
-            var sampleDataGroups = await SampleDataSource.GetGroupsAsync();
-            this.DefaultViewModel["Items"] = sampleDataGroups;
+            //var sampleDataGroups = await SampleDataSource.GetGroupsAsync();
+            //this.DefaultViewModel["Items"] = sampleDataGroups;
         }
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace POS8
         {
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
-            var groupId = ((SampleDataGroup)e.ClickedItem).UniqueId;
-            this.Frame.Navigate(typeof(SplitPage), groupId);
+            //var groupId = ((SampleDataGroup)e.ClickedItem).UniqueId;
+            //this.Frame.Navigate(typeof(SplitPage), groupId);
         }
 
         #region NavigationHelper registration

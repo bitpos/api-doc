@@ -17,7 +17,7 @@ using Windows.UI.Xaml.Media.Imaging;
 // responsiveness by initiating the data loading task in the code behind for App.xaml when the app 
 // is first launched.
 
-namespace POS8.Data
+namespace POS8.DataModel
 {
     /// <summary>
     /// Creates a collection of groups and items with content read from a static json file.
@@ -29,32 +29,33 @@ namespace POS8.Data
     {
         private static SampleDataSource _sampleDataSource = new SampleDataSource();
 
-        private ObservableCollection<SampleDataGroup> _groups = new ObservableCollection<SampleDataGroup>();
-        public ObservableCollection<SampleDataGroup> Groups
-        {
-            get { return this._groups; }
-        }
+        //private ObservableCollection<SampleDataGroup> _groups = new ObservableCollection<SampleDataGroup>();
+        
+        //public ObservableCollection<SampleDataGroup> Groups
+        //{
+        //    get { return this._groups; }
+        //}
 
-        public static async Task<IEnumerable<SampleDataGroup>> GetGroupsAsync()
-        {
-            await _sampleDataSource.GetSampleDataAsync();
+        //public static async Task<IEnumerable<SampleDataGroup>> GetGroupsAsync()
+        //{
+        //    await _sampleDataSource.GetSampleDataAsync();
 
-            return _sampleDataSource.Groups;
-        }
+        //    return _sampleDataSource.Groups;
+        //}
 
-        public static async Task<SampleDataGroup> GetGroupAsync(string uniqueId)
-        {
-            await _sampleDataSource.GetSampleDataAsync();
-            // Simple linear search is acceptable for small data sets
-            var matches = _sampleDataSource.Groups.Where((group) => group.UniqueId.Equals(uniqueId));
-            if (matches.Count() == 1) return matches.First();
-            return null;
-        }
+        //public static async Task<SampleDataGroup> GetGroupAsync(string uniqueId)
+        //{
+        //    await _sampleDataSource.GetSampleDataAsync();
+        //    // Simple linear search is acceptable for small data sets
+        //    var matches = _sampleDataSource.Groups.Where((group) => group.UniqueId.Equals(uniqueId));
+        //    if (matches.Count() == 1) return matches.First();
+        //    return null;
+        //}
 
-        public static async Task<DataModel.Order> GetItemAsync(string uniqueId)
-        {
-            return new DataModel.Order() { Amount = 15.95M, Confirmations = 2, Created = DateTime.Now, Reference = "12" };
-        }
+        //public static async Task<DataModel.Order> GetItemAsync(string uniqueId)
+        //{
+        //    return new DataModel.Order() { Amount = 15.95M, Confirmations = 2, Created = DateTime.Now, Reference = "12" };
+        //}
 
         //public static async Task<SampleDataItem> GetItemAsync(string uniqueId)
         //{
@@ -65,39 +66,39 @@ namespace POS8.Data
         //    return null;
         //}
 
-        private async Task GetSampleDataAsync()
-        {
-            if (this._groups.Count != 0)
-                return;
+        //private async Task GetSampleDataAsync()
+        //{
+        //    if (this._groups.Count != 0)
+        //        return;
 
-            Uri dataUri = new Uri("ms-appx:///DataModel/SampleData.json");
+        //    Uri dataUri = new Uri("ms-appx:///DataModel/SampleData.json");
 
-            StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
-            string jsonText = await FileIO.ReadTextAsync(file);
-            JsonObject jsonObject = JsonObject.Parse(jsonText);
-            JsonArray jsonArray = jsonObject["Groups"].GetArray();
+        //    StorageFile file = await StorageFile.GetFileFromApplicationUriAsync(dataUri);
+        //    string jsonText = await FileIO.ReadTextAsync(file);
+        //    JsonObject jsonObject = JsonObject.Parse(jsonText);
+        //    JsonArray jsonArray = jsonObject["Groups"].GetArray();
 
-            foreach (JsonValue groupValue in jsonArray)
-            {
-                JsonObject groupObject = groupValue.GetObject();
-                SampleDataGroup group = new SampleDataGroup(groupObject["UniqueId"].GetString(),
-                                                            groupObject["Title"].GetString(),
-                                                            groupObject["Subtitle"].GetString(),
-                                                            groupObject["ImagePath"].GetString(),
-                                                            groupObject["Description"].GetString());
+        //    foreach (JsonValue groupValue in jsonArray)
+        //    {
+        //        JsonObject groupObject = groupValue.GetObject();
+        //        SampleDataGroup group = new SampleDataGroup(groupObject["UniqueId"].GetString(),
+        //                                                    groupObject["Title"].GetString(),
+        //                                                    groupObject["Subtitle"].GetString(),
+        //                                                    groupObject["ImagePath"].GetString(),
+        //                                                    groupObject["Description"].GetString());
 
-                //foreach (JsonValue itemValue in groupObject["Items"].GetArray())
-                //{
-                //    JsonObject itemObject = itemValue.GetObject();
-                //    group.Items.Add(new SampleDataItem(itemObject["UniqueId"].GetString(),
-                //                                       itemObject["Title"].GetString(),
-                //                                       itemObject["Subtitle"].GetString(),
-                //                                       itemObject["ImagePath"].GetString(),
-                //                                       itemObject["Description"].GetString(),
-                //                                       itemObject["Content"].GetString()));
-                //}
-                this.Groups.Add(group);
-            }
-        }
+        //        //foreach (JsonValue itemValue in groupObject["Items"].GetArray())
+        //        //{
+        //        //    JsonObject itemObject = itemValue.GetObject();
+        //        //    group.Items.Add(new SampleDataItem(itemObject["UniqueId"].GetString(),
+        //        //                                       itemObject["Title"].GetString(),
+        //        //                                       itemObject["Subtitle"].GetString(),
+        //        //                                       itemObject["ImagePath"].GetString(),
+        //        //                                       itemObject["Description"].GetString(),
+        //        //                                       itemObject["Content"].GetString()));
+        //        //}
+        //        this.Groups.Add(group);
+        //    }
+        //}
     }
 }
