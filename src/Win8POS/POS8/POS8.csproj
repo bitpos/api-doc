@@ -111,9 +111,6 @@
     <Compile Include="Models\ISettings.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\BitPOSSettings.cs" />
-    <Compile Include="ItemsPage.xaml.cs">
-      <DependentUpon>ItemsPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Repositories\LocalDB.cs" />
     <Compile Include="SplitPage.xaml.cs">
       <DependentUpon>SplitPage.xaml</DependentUpon>
@@ -148,10 +145,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="ItemsPage.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="SplitPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

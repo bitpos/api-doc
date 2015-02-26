@@ -66,8 +66,7 @@ namespace POS8
 
 
             itemListView.DataContext = this.DefaultViewModel.Orders;
-            this.DefaultViewModel.Orders.Add(new Models.Order() { Amount = 1, Confirmations = 2, Reference = "123", Created = DateTime.Now });
-
+            this.DefaultViewModel.GetOrders();
         }
 
         /// <summary>
