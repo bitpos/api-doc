@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace POS8.Models
+namespace POS8.ViewModels
 {
     public class Order
     {
@@ -11,5 +11,7 @@ namespace POS8.Models
         public DateTime Created { get; set; }
 
         public Int32? Confirmations { get; set; }
+
+        public Boolean? Paid { get; set; } 
     }
 }

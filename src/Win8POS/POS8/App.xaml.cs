@@ -118,5 +118,15 @@ namespace POS8
             await SuspensionManager.SaveAsync();
             deferral.Complete();
         }
+
+        internal static Models.ISettings Settings
+        {
+            get
+            {
+                //q65ghPZWRBh3HrZgAWqFQgLK68rvIiZp0j7sf3+1oDzYwXYrYX5i2bmK/rceXCU50x1zLI29rZdYbHSqEvIDYQ==
+                return new Models.BitPOSSettings() { APIPassword = "Test1234", APIUser = "dVZYn3LOIIUbvvp6em2ElCm4Frw38QEnZVXOe1/K8CYMkGYwfVn9Touf+YHSz6KnB2WbYk1uShepUT6iryYXlg==", TestNet = false };
+                //return new Models.BitPOSSettings() { APIPassword = "Test1234", APIUser = "dVZYn3LOIIUbvvp6em2ElCm4Frw38QEnZVXOe1/K8CYrywynM1jJ+PHKNxw8647eNGCxHJOp+qpXo+YknnJwig==", TestNet = false };
+            }
+        }
     }
 }

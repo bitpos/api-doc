@@ -4,8 +4,9 @@ namespace POS8.Models
 {
     public interface ISettings
     {
-        string APIPassword { get; set; }
-        string APIUser { get; set; }
-        string ForwardingAddress { get; set; }
+        String APIPassword { get; set; }
+        String APIUser { get; set; }
+        String ForwardingAddress { get; set; }
+        Boolean TestNet { get; set; }
     }
 }

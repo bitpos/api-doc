@@ -1,5 +1,6 @@
 <XamlCompilerSaveState>
   <ReferenceAssemblyList>
-    <LocalAssembly PathName="c:\users\lucas cullen\source\github\api-doc\src\win8pos\pos8\obj\debug\intermediatexaml\pos8.exe" HashGuid="15dc7312-78c4-4225-2aec-da57cda4f015" />
+    <LocalAssembly PathName="c:\users\lucas cullen\source\github\api-doc\src\win8pos\pos8\obj\debug\intermediatexaml\pos8.exe" HashGuid="83f5a6a9-1f8e-aeed-085c-79ce0f75a932" />
+    <ReferenceAssembly PathName="c:\users\lucas cullen\source\github\api-doc\src\win8pos\packages\newtonsoft.json.6.0.8\lib\netcore45\newtonsoft.json.dll" HashGuid="fd3dfcab-cf69-c796-78a2-2423dadb814b" />
   </ReferenceAssemblyList>
 </XamlCompilerSaveState>

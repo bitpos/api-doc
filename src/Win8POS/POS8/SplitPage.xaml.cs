@@ -64,9 +64,8 @@ namespace POS8
             Window.Current.SizeChanged += Window_SizeChanged;
             this.InvalidateVisualState();
 
-
+            this.DefaultViewModel.Title = "Orders";
             itemListView.DataContext = this.DefaultViewModel.Orders;
-            this.DefaultViewModel.GetOrders();
         }
 
         /// <summary>
@@ -82,12 +81,9 @@ namespace POS8
         /// session.  The state will be null the first time a page is visited.</param>
         private async void navigationHelper_LoadState(object sender, LoadStateEventArgs e)
         {
+            this.DefaultViewModel.GetOrders();
 
-            this.DefaultViewModel.Orders.Add(new Models.Order() { Amount = 1, Confirmations = 2, Reference = "123", Created = DateTime.Now });
-
-            //var group = await SampleDataSource.GetGroupAsync((String)e.NavigationParameter);
-            //this.DefaultViewModel["Group"] = group;
-            //this.DefaultViewModel["Items"] = group.Orders;
+            //this.DefaultViewModel.Repo.AddOrder(2.00F, "AUD", "desc", "ref");
 
             //if (e.PageState == null)
             //{
@@ -252,5 +248,10 @@ namespace POS8
         }
 
         #endregion
+
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

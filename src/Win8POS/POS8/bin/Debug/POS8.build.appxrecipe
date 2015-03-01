@@ -17,6 +17,9 @@
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\POS8.exe">
       <PackagePath>POS8.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
+      <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\Repositories\SampleData.json">
       <PackagePath>Repositories\SampleData.json</PackagePath>
     </AppxPackagedFile>
@@ -47,9 +50,6 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\ItemsPage.xbf">
-      <PackagePath>ItemsPage.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\SplitPage.xbf">
       <PackagePath>SplitPage.xbf</PackagePath>

@@ -15,22 +15,25 @@ namespace POS8.ViewModels
 
         public String CurrencyCode { get; set; }
 
-        public ObservableCollection<Models.Order> Orders { get; set; }
+        public ObservableCollection<ViewModels.Order> Orders { get; set; }
 
+        public Repositories.BitPOS Repo
+        {
+            get
+            {
+                return new Repositories.BitPOS(App.Settings.APIUser, App.Settings.APIPassword);
+            }
+        }
 
         public SplitScreen()
         {
-            this.Orders = new ObservableCollection<Models.Order>();
+            this.Orders = new ObservableCollection<ViewModels.Order>();
         }
 
         public async void GetOrders()
         {
-
-        }
-
-        public static async Task<Models.Order> GetItemsAsync()
-        {
-            return new Models.Order() { Amount = 15.95M, Confirmations = 2, Created = DateTime.Now, Reference = "12" };
+            this.Orders.Add(new ViewModels.Order() { Amount = 15.95M, Confirmations = 2, Created = DateTime.Now, Reference = "12" });
+            this.Orders.Add(new ViewModels.Order() { Amount = 10.00M, Confirmations = 5, Created = DateTime.Now, Reference = "12" });
         }
     }
 }

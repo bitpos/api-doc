@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace POS8.Models
 {
@@ -13,5 +9,11 @@ namespace POS8.Models
         public String APIUser { get; set; }
 
         public String APIPassword { get; set; }
+
+        public Boolean TestNet
+        {
+            get;
+            set;
+        }
     }
 }
