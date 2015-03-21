@@ -2,3 +2,4 @@ C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8.Tests\bin\Debug\POS
 C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8.Tests\bin\Debug\POS8.Tests.pdb
 C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8.Tests\obj\Debug\POS8.Tests.dll
 C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8.Tests\obj\Debug\POS8.Tests.pdb
+C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8.Tests\obj\Debug\POS8.Tests.csprojResolveAssemblyReference.cache

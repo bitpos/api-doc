@@ -106,6 +106,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\BitPOS\Order.cs" />
+    <Compile Include="Models\BitPOS\OrderResponse.cs" />
     <Compile Include="Models\ISettings.cs" />
     <Compile Include="ViewModels\Order.cs" />
     <Compile Include="Models\BitPOSSettings.cs" />

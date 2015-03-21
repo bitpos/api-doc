@@ -83,8 +83,6 @@ namespace POS8
         {
             this.DefaultViewModel.GetOrders();
 
-            //this.DefaultViewModel.Repo.AddOrder(2.00F, "AUD", "desc", "ref");
-
             //if (e.PageState == null)
             //{
             //    this.itemListView.SelectedItem = null;
@@ -174,7 +172,7 @@ namespace POS8
 
         private bool CanGoBack()
         {
-            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
+            if (this.UsingLogicalPageNavigation()) //&& this.itemListView.SelectedItem != null
             {
                 return true;
             }
@@ -185,18 +183,18 @@ namespace POS8
         }
         private void GoBack()
         {
-            if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
-            {
-                // When logical page navigation is in effect and there's a selected item that
-                // item's details are currently displayed.  Clearing the selection will return to
-                // the item list.  From the user's point of view this is a logical backward
-                // navigation.
-                this.itemListView.SelectedItem = null;
-            }
-            else
-            {
-                this.navigationHelper.GoBack();
-            }
+            //if (this.UsingLogicalPageNavigation() && this.itemListView.SelectedItem != null)
+            //{
+            //    // When logical page navigation is in effect and there's a selected item that
+            //    // item's details are currently displayed.  Clearing the selection will return to
+            //    // the item list.  From the user's point of view this is a logical backward
+            //    // navigation.
+            //    this.itemListView.SelectedItem = null;
+            //}
+            //else
+            //{
+            //    this.navigationHelper.GoBack();
+            //}
         }
 
         private void InvalidateVisualState()
@@ -249,9 +247,60 @@ namespace POS8
 
         #endregion
 
+        //Buttons
         private void AppBarButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.Repo.AddOrder(2.00F, "AUD", "desc", "ref");
+        }
+
+        private void btn1_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 1;
+        }
+
+        private void btn2_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 2;
+        }
+
+        private void btn3_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 3;
+        }
+
+        private void btn4_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 4;
+        }
+
+        private void btn5_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 5;
+        }
+
+        private void btn6_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 6;
+        }
+
+        private void btn7_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 7;
+        }
+
+        private void btn8_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 8;
+        }
+
+        private void btn9_Click(object sender, RoutedEventArgs e)
+        {
+            this.DefaultViewModel.OrderValue += 9;
         }
     }
 }

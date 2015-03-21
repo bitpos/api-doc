@@ -19,10 +19,10 @@
     </Page.Resources>
     <Page.TopAppBar>
         <CommandBar IsSticky="True">
-            <AppBarButton x:ConnectionId='0' Label="Refresh" Icon="Refresh"                           />
-            <AppBarButton x:ConnectionId='0' Label="Help" Icon="Help"                           />
+            <AppBarButton x:ConnectionId='1' Label="Refresh" Icon="Refresh"                           />
+            <AppBarButton x:ConnectionId='2' Label="Help" Icon="Help"                           />
             <CommandBar.SecondaryCommands>
-                <AppBarButton x:ConnectionId='0' Label="Add" Icon="Add"                           />
+                <AppBarButton x:ConnectionId='3' Label="Add" Icon="Add"                           />
             </CommandBar.SecondaryCommands>
         </CommandBar>
     </Page.TopAppBar>
@@ -37,7 +37,6 @@
                 <EntranceThemeTransition/>
             </TransitionCollection>
         </Grid.ChildrenTransitions>
-
         <Grid.RowDefinitions>
             <RowDefinition Height="140"/>
             <RowDefinition Height="*"/>
@@ -50,7 +49,8 @@
         <!-- Back button and page title -->
         <Grid x:Name="titlePanel">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="150"/>
+                <ColumnDefinition Width="150"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="backButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
@@ -59,25 +59,25 @@
                         AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
                         AutomationProperties.ItemType="Navigation Button"/>
-            <Button x:Name="addButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
+            <Button x:Name="otherButton" Margin="39,59,39,0" Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         Style="{StaticResource NavigationBackButtonNormalStyle}"
                         VerticalAlignment="Top"
-                        AutomationProperties.Name="Add"
+                        AutomationProperties.Name="Back"
                         AutomationProperties.AutomationId="BackButton"
-                        AutomationProperties.ItemType="Navigation Button"/>
-            <TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="1" 
-                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,0,40"/>
+                        AutomationProperties.ItemType="Navigation Button" Grid.Column="1"/>
+            <!--<TextBlock x:Name="pageTitle" Text="{Binding Title}" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="2" 
+                        IsHitTestVisible="false" TextWrapping="NoWrap" VerticalAlignment="Bottom" Margin="0,0,0,40"/>-->
         </Grid>
 
-        <!-- Vertical scrolling item list -->
-        <ListView x:ConnectionId='0'
+        <!-- Vertical scrolling orders list -->
+        <ListView x:ConnectionId='4'
             x:Name="itemListView"
             AutomationProperties.AutomationId="ItemsListView"
             AutomationProperties.Name="Items"
             TabIndex="1"
             Grid.Row="1"
+            Grid.Column="0"
             Margin="-10,-10,0,0"
-            Padding="120,0,0,60"
             ItemsSource="{Binding}"
             IsSwipeEnabled="False"
                                                             >
@@ -88,12 +88,11 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <Border Background="{ThemeResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="120" Height="60">
-                            <TextBlock Text="{Binding Amount}"></TextBlock>
-                        </Border>
-                        <StackPanel Grid.Column="1" Margin="10,0,0,0">
-                            <TextBlock Text="{Binding Reference}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40"/>
-                            <TextBlock Text="bla"></TextBlock>
+                        <StackPanel Grid.Column="0" Margin="10,0,0,0">
+                            <TextBlock Text="{Binding Reference}" Style="{StaticResource TitleTextBlockStyle}" TextWrapping="NoWrap" MaxHeight="40" FontFamily="Global User Interface" FontSize="48"/>
+                            <TextBlock Text="{Binding FiatAmount}" FontFamily="Global User Interface"></TextBlock>
+                            <TextBlock Text="0.011 BTC" FontFamily="Global User Interface"></TextBlock>
+                            <TextBlock Text="{Binding Status}" FontFamily="Global User Interface" FontSize="18"></TextBlock>
                         </StackPanel>
                     </Grid>
                 </DataTemplate>
@@ -104,40 +103,58 @@
                 </Style>
             </ListView.ItemContainerStyle>
         </ListView>
+        
+        <StackPanel
+            Grid.Row="0"
+            Grid.Column="1">
+            <TextBlock x:Name="orderValueTitle" Text="{Binding OrderValue}" Style="{StaticResource HeaderTextBlockStyle}"></TextBlock>
+        </StackPanel>
 
-
-        <!-- Details for selected item -->
-        <!--<ScrollViewer
+        <!-- Details for selected item / calculator -->
+        <ScrollViewer
             x:Name="itemDetail"
             AutomationProperties.AutomationId="ItemDetailScrollViewer"
             Grid.Column="1"
+            Grid.Row="1"
             Grid.RowSpan="2"
             Padding="60,0,66,0"
-            DataContext="{Binding SelectedItem, ElementName=itemListView}"
-            d:DataContext="{Binding Groups[0].Items[0], Source={d:DesignData Source=/DataModel/SampleData.json, Type=data:SampleDataSource}}"
             HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto"
             ScrollViewer.HorizontalScrollMode="Disabled" ScrollViewer.VerticalScrollMode="Enabled"
             ScrollViewer.ZoomMode="Disabled">
-
+            
             <Grid x:Name="itemDetailGrid" Margin="0,60,0,50">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <!--Calculator button rows-->
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="120"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
+                    <ColumnDefinition Width="120"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                <Image Source="{Binding ImagePath}" Grid.Row="1" Margin="0,0,20,0" Width="180" Height="180" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
+                <Button x:ConnectionId='5' x:Name="btn7" Content="7" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72"                   ></Button>
+                <Button x:ConnectionId='6' x:Name="btn8" Content="8" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="1" Grid.Row="0"                   ></Button>
+                <Button x:ConnectionId='7' x:Name="btn9" Content="9" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="2" Grid.Row="0"                   ></Button>
+                <Button x:ConnectionId='8' x:Name="btn4" Content="4" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="0" Grid.Row="1"                   ></Button>
+                <Button x:ConnectionId='9' x:Name="btn5" Content="5" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="1" Grid.Row="1"                   ></Button>
+                <Button x:ConnectionId='10' x:Name="btn6" Content="6" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="2" Grid.Row="1"                   ></Button>
+                <Button x:ConnectionId='11' x:Name="btn1" Content="1" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="0" Grid.Row="2"                   ></Button>
+                <Button x:ConnectionId='12' x:Name="btn2" Content="2" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="1" Grid.Row="2"                   ></Button>
+                <Button x:ConnectionId='13' x:Name="btn3" Content="3" HorizontalAlignment="Center" Width="118" Height="118" FontSize="72" Grid.Column="2" Grid.Row="2"                   ></Button>
+                <!--<Image Source="{Binding ImagePath}" Grid.Row="1" Margin="0,0,20,0" Width="180" Height="180" Stretch="UniformToFill" AutomationProperties.Name="{Binding Title}"/>
                 <StackPanel x:Name="itemDetailTitlePanel" Grid.Row="1" Grid.Column="1">
                     <TextBlock x:Name="itemTitle" Margin="0,-10,0,0" Text="{Binding Title}" Style="{StaticResource SubheaderTextBlockStyle}"/>
                     <TextBlock x:Name="itemSubtitle" Margin="0,0,0,20" Text="{Binding Subtitle}" Style="{StaticResource SubtitleTextBlockStyle}"/>
                 </StackPanel>
-                <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding Content}" Style="{StaticResource BodyTextBlockStyle}"/>
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="2" Margin="0,20,0,0" Text="{Binding OrderTotal}" Style="{StaticResource BodyTextBlockStyle}"/>-->
             </Grid>
-        </ScrollViewer-->
+        </ScrollViewer>
+        
         <VisualStateManager.VisualStateGroups>
             <!-- Visual states reflect the application's view state -->
             <VisualStateGroup x:Name="ViewStates">

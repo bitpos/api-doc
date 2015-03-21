@@ -17,13 +17,13 @@
     <AppXManifest Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-02-27T11:21:47.767</Modified>
+      <Modified>2015-03-07T03:14:42.570</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\POS8.exe">
       <PackagePath>POS8.exe</PackagePath>
-      <Modified>2015-03-01T06:02:00.355</Modified>
+      <Modified>2015-03-21T05:11:59.889</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\packages\Newtonsoft.Json.6.0.8\lib\netcore45\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -67,15 +67,15 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-02-27T11:21:47.264</Modified>
+      <Modified>2015-03-06T22:37:21.882</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\SplitPage.xbf">
       <PackagePath>SplitPage.xbf</PackagePath>
-      <Modified>2015-03-01T05:55:22.738</Modified>
+      <Modified>2015-03-06T22:49:59.221</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Lucas Cullen\Source\GitHub\api-doc\src\Win8POS\POS8\bin\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-02-27T11:21:47.703</Modified>
+      <Modified>2015-03-07T03:14:42.239</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
