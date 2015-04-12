@@ -21,7 +21,7 @@ namespace BitPOS
 
 		private void Refresh()
 		{
-			labAmount.Text = String.Format("${0:00}", amount);
+			labAmount.Text = String.Format("${0:0.00}", amount);
 		}
 
 		partial void btn1_down (UIButton sender)
@@ -42,6 +42,20 @@ namespace BitPOS
 		{
 			amount *= 10;
 			amount += 4;
+			Refresh();
+		}
+
+		partial void btn5_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 5;
+			Refresh();
+		}
+
+		partial void btn6_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 6;
 			Refresh();
 		}
 			

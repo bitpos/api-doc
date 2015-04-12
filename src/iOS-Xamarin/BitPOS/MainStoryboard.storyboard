@@ -92,6 +92,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn1_down:" destination="78" id="77" eventType="touchDown"/>
+                                    <action selector="btn5_down:" destination="JEX-9P-axG" id="91" eventType="touchDown"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="79" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -104,6 +105,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn1_down:" destination="81" id="80" eventType="touchDown"/>
+                                    <action selector="btn6_down:" destination="JEX-9P-axG" id="96" eventType="touchDown"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="82" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
