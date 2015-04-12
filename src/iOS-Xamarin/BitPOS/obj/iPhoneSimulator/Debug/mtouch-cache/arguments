@@ -1,10 +1,10 @@
 # Version: 8.8.2.4 (981acb3)
-# [first argument, ignore] # /Users/lucascullen/Projects/BitPOS/BitPOS/mtouch.exe
+# [first argument, ignore] # /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/mtouch.exe
 /Library/Frameworks/Xamarin.iOS.framework/Versions/8.8.2.4/bin/mtouch-64 \
 	--cache \
-	/Users/lucascullen/Projects/BitPOS/BitPOS/obj/iPhoneSimulator/Debug/mtouch-cache \
+	/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhoneSimulator/Debug/mtouch-cache \
 	--sim \
-	/Users/lucascullen/Projects/BitPOS/BitPOS/bin/iPhoneSimulator/Debug/BitPOS.app \
+	/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/BitPOS.app \
 	--executable \
 	BitPOS \
 	--debug \
@@ -124,4 +124,4 @@
 	../packages/sqlite-net-pcl.1.0.11/lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10/SQLite-net.dll \
 	-r \
 	../packages/Newtonsoft.Json.6.0.8/lib/portable-net40+sl5+wp80+win8+wpa81/Newtonsoft.Json.dll \
-	/Users/lucascullen/Projects/BitPOS/BitPOS/bin/iPhoneSimulator/Debug//BitPOS.exe \
+	/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug//BitPOS.exe \

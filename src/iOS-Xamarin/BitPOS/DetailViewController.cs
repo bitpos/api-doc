@@ -12,10 +12,11 @@ namespace BitPOS
 		private Decimal amount = 0;
 		UIPopoverController masterPopoverController;
 		object detailItem;
+		private Providers.IExchangeProvider exchangeProvider;
 
 		public DetailViewController (IntPtr handle) : base (handle)
 		{
-			Providers.IExchangeProvider
+			exchangeProvider = new Providers.Mock ();
 		}
 
 //		public void btn1_down(object sender, EventArgs ea)
@@ -50,8 +51,8 @@ namespace BitPOS
 		void ConfigureView ()
 		{
 			// Update the user interface for the detail item
-			if (IsViewLoaded && detailItem != null)
-				detailDescriptionLabel.Text = detailItem.ToString ();
+			//if (IsViewLoaded && detailItem != null)
+				//detailDescriptionLabel.Text = detailItem.ToString ();
 		}
 
 		public override void DidReceiveMemoryWarning ()
@@ -65,7 +66,9 @@ namespace BitPOS
 		public override void ViewDidLoad ()
 		{
 			base.ViewDidLoad ();
-			
+
+			labExchange.Text = String.Format("${0:0.000}", exchangeProvider.GetRate (1, "AUD"));
+
 			// Any additional setup after loading the view, typically from a nib.
 			ConfigureView ();
 		}

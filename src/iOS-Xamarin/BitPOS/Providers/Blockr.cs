@@ -16,7 +16,7 @@ namespace BitPOS.Providers
 			throw new NotImplementedException ();
 		}
 
-		public Decimal GetRate(String currencyCode)
+		public Decimal GetRate(Decimal amount, String currencyCode)
 		{
 			//http://btc.blockr.io/api/v1/exchangerate/current
 			throw new NotImplementedException ();
