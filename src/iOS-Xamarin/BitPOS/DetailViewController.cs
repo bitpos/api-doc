@@ -58,6 +58,27 @@ namespace BitPOS
 			amount += 6;
 			Refresh();
 		}
+
+		partial void btn7_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 7;
+			Refresh();
+		}
+
+		partial void btn8_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 8;
+			Refresh();
+		}
+
+		partial void btn9_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 9;
+			Refresh();
+		}
 			
 		public void SetDetailItem (object newDetailItem)
 		{
