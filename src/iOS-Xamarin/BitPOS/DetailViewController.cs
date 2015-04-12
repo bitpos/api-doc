@@ -19,22 +19,32 @@ namespace BitPOS
 			exchangeProvider = new Providers.Mock ();
 		}
 
-//		public void btn1_down(object sender, EventArgs ea)
-//		{
-//			new UIAlertView("Touch3", "TouchUpInside handled", null, "OK", null).Show();
-//		}
-
-		partial void btn1_down (UIButton sender)
+		private void Refresh()
 		{
-			//stuff
-			amount += 1;
 			labAmount.Text = String.Format("${0:00}", amount);
 		}
 
-		private void HandleTouchUpInside (object sender, EventArgs ea) {
-			new UIAlertView("Touch3", "TouchUpInside handled", null, "OK", null).Show();
+		partial void btn1_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 1;
+			Refresh();
 		}
 
+		partial void btn2_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 2;
+			Refresh();
+		}
+
+		partial void btn4_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 4;
+			Refresh();
+		}
+			
 		public void SetDetailItem (object newDetailItem)
 		{
 			if (detailItem != newDetailItem) {
@@ -90,4 +100,3 @@ namespace BitPOS
 		}
 	}
 }
-

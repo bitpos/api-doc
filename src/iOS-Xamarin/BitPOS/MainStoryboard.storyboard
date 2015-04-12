@@ -31,10 +31,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="84" y="308" width="130" height="130"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="164" y="304" width="130" height="130"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="96"/>
                                 <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="1">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -56,9 +57,79 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="60" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="324" y="304" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="2">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="62" id="61" eventType="touchDown"/>
+                                    <action selector="btn2_down:" destination="JEX-9P-axG" id="85" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="63" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="486" y="304" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="3">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="65" id="64" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="76" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="324" y="464" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="78" id="77" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="79" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="486" y="464" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="6">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="81" id="80" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="82" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="164" y="464" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="4">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="84" id="83" eventType="touchDown"/>
+                                    <action selector="btn4_down:" destination="JEX-9P-axG" id="88" eventType="touchDown"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                        <constraints>
+                            <constraint id="70" firstItem="60" firstAttribute="width" secondItem="7" secondAttribute="width" constant="0.0"/>
+                            <constraint id="71" firstItem="63" firstAttribute="width" secondItem="7" secondAttribute="width" constant="0.0"/>
+                            <constraint id="72" firstItem="60" firstAttribute="width" secondItem="7" secondAttribute="width" constant="0.0"/>
+                            <constraint id="73" firstItem="63" firstAttribute="width" secondItem="7" secondAttribute="width" constant="0.0"/>
+                            <constraint id="74" firstItem="60" firstAttribute="height" secondItem="7" secondAttribute="height" constant="0.0"/>
+                            <constraint id="75" firstItem="63" firstAttribute="height" secondItem="7" secondAttribute="height" constant="0.0"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
@@ -66,6 +137,11 @@
                         <outlet property="btn1" destination="7" id="name-outlet-7"/>
                         <outlet property="labAmount" destination="39" id="name-outlet-39"/>
                         <outlet property="labExchange" destination="52" id="name-outlet-52"/>
+                        <outlet property="btn2" destination="60" id="name-outlet-60"/>
+                        <outlet property="btn3" destination="63" id="name-outlet-63"/>
+                        <outlet property="btn4" destination="82" id="name-outlet-82"/>
+                        <outlet property="btn5" destination="76" id="name-outlet-76"/>
+                        <outlet property="btn6" destination="79" id="name-outlet-79"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
