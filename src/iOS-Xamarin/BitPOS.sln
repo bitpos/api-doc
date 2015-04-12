@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitPOS", "BitPOS\BitPOS.csproj", "{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|iPhoneSimulator = Debug|iPhoneSimulator
+		Release|iPhoneSimulator = Release|iPhoneSimulator
+		Debug|iPhone = Debug|iPhone
+		Release|iPhone = Release|iPhone
+		Ad-Hoc|iPhone = Ad-Hoc|iPhone
+		AppStore|iPhone = AppStore|iPhone
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Debug|iPhone.Build.0 = Debug|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Release|iPhone.ActiveCfg = Release|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Release|iPhone.Build.0 = Release|iPhone
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{A9CA78A9-F0DE-4FF4-91C5-72942248A77A}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+	EndGlobalSection
+EndGlobal
