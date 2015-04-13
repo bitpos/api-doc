@@ -2,6 +2,7 @@
 
 namespace BitPOS.Models
 {
+	//Bitpos order
 	public class Order //: IOrder
 	{
 //		public Decimal Amount { get; set; }
@@ -9,7 +10,7 @@ namespace BitPOS.Models
 //		public String Address { get; set; }
 //		public DateTime Created { get; set;}
 
-		public string currency { get; set; }
+		public String currency { get; set; }
 		public Int32 amount { get; set; }
 		public String reference { get; set; }
 		public String description { get; set; }
@@ -22,7 +23,7 @@ namespace BitPOS.Models
 
 		public override string ToString ()
 		{
-			return string.Format ("{0} {1} {2}", Reference, Amount, Address);
+			return string.Format ("{0} {1}", reference, amount );
 		}
 	}
 }

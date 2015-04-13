@@ -133,7 +133,7 @@
     <Compile Include="Providers\Mock.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\Settings.cs" />
+    <Compile Include="Models\OrderResponse.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

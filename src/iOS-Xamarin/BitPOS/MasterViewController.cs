@@ -26,7 +26,7 @@ namespace BitPOS
 
 		void AddNewItem (object sender, EventArgs args)
 		{
-			Models.Order order = new BitPOS.Models.Order () { Amount = 1, Created = System.DateTime.Now };
+			Models.Order order = new BitPOS.Models.Order () { amount = 1 };
 			dataSource.Objects.Insert (0, order);
 
 			using (var indexPath = NSIndexPath.FromRowSection (0, 0))

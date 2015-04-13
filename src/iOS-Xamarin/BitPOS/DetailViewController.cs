@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Drawing;
 using System.Collections.Generic;
 
@@ -8,6 +9,8 @@ using System.Security.Cryptography.X509Certificates;
 
 using System.Net;
 using System.Net.Security;
+
+using Newtonsoft.Json;
 
 namespace BitPOS
 {
@@ -94,17 +97,18 @@ namespace BitPOS
 		{
 			Boolean isTestNet = true;
 
-			const String KEY = "api_key_from_admin_portal";
-			const String PASSWORD = "password_used_when_api_key_was_created";
+			//const String KEY = "api_key_from_admin_portal";
+			//const String PASSWORD = "password_used_when_api_key_was_created";
 
-			String authorization = String.Format("{0}:{1}", KEY, PASSWORD);
+			String authorization = String.Format("{0}:{1}", Settings.Key, Settings.Password);
 			String base64credentials = Convert.ToBase64String(new ASCIIEncoding().GetBytes(authorization));
 
 			//Note fields mandatory otherwise 500 error
-			BitPOS.Models.Order order = new BitPOS.Models.Order() { amount = amount, currency = "AUD", reference = "BitcoinBrisbane", description = "Test Ticket", failureURL="https://www.bitcoinbrisbane.com.au/fail/1", successURL="https://www.bitcoinbrisbane.com.au/greatsuccess/1" };
+			Int32 amountInCents = Convert.ToInt32(amount * 100);
+			BitPOS.Models.Order order = new BitPOS.Models.Order() { amount = amountInCents, currency = "AUD", reference = "BitcoinBrisbane", description = "Test Ticket", failureURL="https://www.bitcoinbrisbane.com.au/fail/1", successURL="https://www.bitcoinbrisbane.com.au/greatsuccess/1" };
 			String json = JsonConvert.SerializeObject(order);
 
-			WebClient webClient = new WebClient() { Credentials = new NetworkCredential(KEY, PASSWORD) };
+			WebClient webClient = new WebClient() { Credentials = new NetworkCredential(Settings.Key, Settings.Password) };
 			webClient.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", base64credentials);
 			webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
 
@@ -114,7 +118,9 @@ namespace BitPOS
 				//System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
 			}
 
-			String response = webClient.UploadString("https://rest.test.bitpos.me/services/webpay/order/create", json);
+			String response = webClient.UploadString("https://rest.bitpos.me/services/webpay/order/create", json);
+
+			Models.OrderResponse orderResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.OrderResponse>(response);
 		}
 			
 		public void SetDetailItem (object newDetailItem)
