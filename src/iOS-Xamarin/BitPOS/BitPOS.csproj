@@ -126,13 +126,14 @@
     </Compile>
     <Compile Include="Repository\IOrderRepository.cs" />
     <Compile Include="Models\IOrder.cs" />
-    <Compile Include="Models\BitPosOrder.cs" />
     <Compile Include="Repository\LocalSQLite.cs" />
     <Compile Include="Providers\IBalanceProvider.cs" />
     <Compile Include="Providers\Blockr.cs" />
     <Compile Include="Providers\IExchangeProvider.cs" />
     <Compile Include="Providers\Mock.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Models\Order.cs" />
+    <Compile Include="Models\Settings.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>

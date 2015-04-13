@@ -16,6 +16,10 @@ namespace BitPOS
 	{
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btn0 { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UIButton btn1 { get; set; }
 
 		[Outlet]
@@ -52,11 +56,23 @@ namespace BitPOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnDecimal { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnPay { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel labAmount { get; set; }
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel labExchange { get; set; }
+
+		[Action ("btn0_down:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btn0_down (UIButton sender);
 
 		[Action ("btn1_down:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
@@ -90,8 +106,16 @@ namespace BitPOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btn9_down (UIButton sender);
 
+		[Action ("btnPay_down:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btnPay_down (UIButton sender);
+
 		void ReleaseDesignerOutlets ()
 		{
+			if (btn0 != null) {
+				btn0.Dispose ();
+				btn0 = null;
+			}
 			if (btn1 != null) {
 				btn1.Dispose ();
 				btn1 = null;
@@ -127,6 +151,14 @@ namespace BitPOS
 			if (btn9 != null) {
 				btn9.Dispose ();
 				btn9 = null;
+			}
+			if (btnDecimal != null) {
+				btnDecimal.Dispose ();
+				btnDecimal = null;
+			}
+			if (btnPay != null) {
+				btnPay.Dispose ();
+				btnPay = null;
 			}
 			if (labAmount != null) {
 				labAmount.Dispose ();

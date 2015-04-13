@@ -51,10 +51,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exchange Rate $0.00" lineBreakMode="tailTruncation" minimumFontSize="10" id="52" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" textAlignment="center">
-                                <rect key="frame" x="241" y="816" width="296" height="21"/>
+                                <rect key="frame" x="241" y="243" width="296" height="21"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="60" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -121,13 +121,14 @@
                                     <action selector="btn4_down:" destination="JEX-9P-axG" id="88" eventType="touchDown"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="97" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="97" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="164" y="622" width="130" height="130"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="96"/>
                                 <size key="titleShadowOffset" width="0" height="0"/>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2196078431372549" green="0.21568627450980393" blue="0.21568627450980393" alpha="1"/>
                                 <state key="normal" title="7">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
                                 </state>
                                 <connections>
                                     <action selector="btn1_down:" destination="99" id="98" eventType="touchDown"/>
@@ -135,7 +136,7 @@
                                     <action selector="btn7_down:" destination="JEX-9P-axG" id="112" eventType="touchDown"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="102" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="102" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="324" y="622" width="130" height="130"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="96"/>
                                 <size key="titleShadowOffset" width="0" height="0"/>
@@ -149,7 +150,7 @@
                                     <action selector="btn8_down:" destination="JEX-9P-axG" id="113" eventType="touchDown"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="106" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="106" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
                                 <rect key="frame" x="486" y="622" width="130" height="130"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="96"/>
                                 <size key="titleShadowOffset" width="0" height="0"/>
@@ -163,13 +164,56 @@
                                     <action selector="btn9_down:" destination="JEX-9P-axG" id="114" eventType="touchDown"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="133" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="164" y="779" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2196078431372549" green="0.21568627450980393" blue="0.21568627450980393" alpha="1"/>
+                                <state key="normal" title=".">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="135" id="134" eventType="touchDown"/>
+                                    <action selector="btn4_down:" destination="137" id="136" eventType="touchDown"/>
+                                    <action selector="btn7_down:" destination="139" id="138" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="140" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="324" y="779" width="130" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2196078431372549" green="0.21568627450980393" blue="0.21568627450980393" alpha="1"/>
+                                <state key="normal" title="0">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="142" id="141" eventType="touchDown"/>
+                                    <action selector="btn4_down:" destination="144" id="143" eventType="touchDown"/>
+                                    <action selector="btn7_down:" destination="146" id="145" eventType="touchDown"/>
+                                    <action selector="btn0_down:" destination="JEX-9P-axG" id="147" eventType="touchDown"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="152" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                <rect key="frame" x="486" y="780" width="260" height="130"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="96"/>
+                                <size key="titleShadowOffset" width="0" height="0"/>
+                                <color key="backgroundColor" colorSpace="calibratedRGB" red="0.2196078431372549" green="0.21568627450980393" blue="0.21568627450980393" alpha="1"/>
+                                <state key="normal" title="Pay">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                                </state>
+                                <connections>
+                                    <action selector="btn1_down:" destination="154" id="153" eventType="touchDown"/>
+                                    <action selector="btn4_down:" destination="156" id="155" eventType="touchDown"/>
+                                    <action selector="btn7_down:" destination="158" id="157" eventType="touchDown"/>
+                                    <action selector="btnPay_down:" destination="JEX-9P-axG" id="159" eventType="touchDown"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.33725490196078434" green="0.592156862745098" blue="0.098039215686274508" alpha="1"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                        <constraints>
-                            <constraint id="110" firstItem="102" firstAttribute="width" secondItem="106" secondAttribute="width" constant="0.0"/>
-                            <constraint id="111" firstItem="97" firstAttribute="width" secondItem="106" secondAttribute="width" constant="0.0"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
@@ -185,6 +229,9 @@
                         <outlet property="btn7" destination="97" id="name-outlet-97"/>
                         <outlet property="btn8" destination="102" id="name-outlet-102"/>
                         <outlet property="btn9" destination="106" id="name-outlet-106"/>
+                        <outlet property="btnDecimal" destination="133" id="name-outlet-133"/>
+                        <outlet property="btn0" destination="140" id="name-outlet-140"/>
+                        <outlet property="btnPay" destination="152" id="name-outlet-152"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

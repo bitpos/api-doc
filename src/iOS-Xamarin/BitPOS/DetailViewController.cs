@@ -4,6 +4,10 @@ using System.Collections.Generic;
 
 using Foundation;
 using UIKit;
+using System.Security.Cryptography.X509Certificates;
+
+using System.Net;
+using System.Net.Security;
 
 namespace BitPOS
 {
@@ -79,6 +83,39 @@ namespace BitPOS
 			amount += 9;
 			Refresh();
 		}
+
+		partial void btn0_down (UIButton sender)
+		{
+			amount *= 10;
+			Refresh();
+		}
+
+		partial void btnPay_down (UIButton sender)
+		{
+			Boolean isTestNet = true;
+
+			const String KEY = "api_key_from_admin_portal";
+			const String PASSWORD = "password_used_when_api_key_was_created";
+
+			String authorization = String.Format("{0}:{1}", KEY, PASSWORD);
+			String base64credentials = Convert.ToBase64String(new ASCIIEncoding().GetBytes(authorization));
+
+			//Note fields mandatory otherwise 500 error
+			BitPOS.Models.Order order = new BitPOS.Models.Order() { amount = amount, currency = "AUD", reference = "BitcoinBrisbane", description = "Test Ticket", failureURL="https://www.bitcoinbrisbane.com.au/fail/1", successURL="https://www.bitcoinbrisbane.com.au/greatsuccess/1" };
+			String json = JsonConvert.SerializeObject(order);
+
+			WebClient webClient = new WebClient() { Credentials = new NetworkCredential(KEY, PASSWORD) };
+			webClient.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", base64credentials);
+			webClient.Headers[HttpRequestHeader.ContentType] = "application/json";
+
+			if (isTestNet == true)
+			{
+				//Use this for test because of SSL issues
+				//System.Net.ServicePointManager.ServerCertificateValidationCallback = delegate(object sender, X509Certificate certificate, X509Chain chain, SslPolicyErrors sslPolicyErrors) { return true; };
+			}
+
+			String response = webClient.UploadString("https://rest.test.bitpos.me/services/webpay/order/create", json);
+		}
 			
 		public void SetDetailItem (object newDetailItem)
 		{
@@ -112,7 +149,7 @@ namespace BitPOS
 		{
 			base.ViewDidLoad ();
 
-			labExchange.Text = String.Format("${0:0.000}", exchangeProvider.GetRate (1, "AUD"));
+			labExchange.Text = String.Format("Exchange rate ${0:0.000}", exchangeProvider.GetRate (1, "AUD"));
 
 			// Any additional setup after loading the view, typically from a nib.
 			ConfigureView ();
