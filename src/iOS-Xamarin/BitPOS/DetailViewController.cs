@@ -21,6 +21,8 @@ namespace BitPOS
 		object detailItem;
 		private Providers.IExchangeProvider exchangeProvider;
 
+		private const Int64 SATOSHI = 100000000;
+
 		public DetailViewController (IntPtr handle) : base (handle)
 		{
 			exchangeProvider = new Providers.Mock ();
@@ -129,7 +131,7 @@ namespace BitPOS
 
 			Models.BitPOS.OrderResponse orderResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BitPOS.OrderResponse>(response);
 
-			UIAlertView alert = new UIAlertView ("Send BTC", String.Format("Send {0:0.0000} to {1}", orderResponse.satoshis, orderResponse.bitcoinAddress) , null, "Ok", null);
+			UIAlertView alert = new UIAlertView ("Send BTC", String.Format("Send {0:0.0000} to {1}", Decimal.Divide(orderResponse.satoshis, SATOSHI), orderResponse.bitcoinAddress) , null, "Ok", null);
 			alert.Show ();
 		}
 			
@@ -174,7 +176,7 @@ namespace BitPOS
 		[Export ("splitViewController:willHideViewController:withBarButtonItem:forPopoverController:")]
 		public void WillHideViewController (UISplitViewController splitController, UIViewController viewController, UIBarButtonItem barButtonItem, UIPopoverController popoverController)
 		{
-			barButtonItem.Title = NSBundle.MainBundle.LocalizedString ("Master", "Master");
+			barButtonItem.Title = NSBundle.MainBundle.LocalizedString ("Orders", "Orders");
 			NavigationItem.SetLeftBarButtonItem (barButtonItem, true);
 			masterPopoverController = popoverController;
 		}
