@@ -7,10 +7,10 @@
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhoneSimulator/Debug/actool/partial-info.plist
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhoneSimulator/Debug/actool/asset-manifest.plist
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhoneSimulator/Debug/
-/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/SQLitePCL.raw.dll
-/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/SQLite-net.dll
-/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/BitPOS.exe.mdb
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/BitPOS.exe
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhoneSimulator/Debug/BitPOS.exe
 /Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhoneSimulator/Debug/BitPOS.exe.mdb
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/SQLitePCL.raw.dll
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/SQLite-net.dll
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhoneSimulator/Debug/Newtonsoft.Json.dll

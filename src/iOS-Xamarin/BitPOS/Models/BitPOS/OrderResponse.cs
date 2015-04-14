@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace BitPOS.Models
+namespace BitPOS.Models.BitPOS
 {
 	public class OrderResponse
 	{
@@ -15,6 +15,14 @@ namespace BitPOS.Models
 		public String reference { get; set; }
 
 		public String transactionSpeed { get; set; }
+
+		public String description { get; set; }
+
+		public String encodedOrderId { get; set; }
+
+		public Int64 satoshis { get; set; }
+
+		public String bitcoinUri { get; set; }
 
 		public OrderResponse ()
 		{

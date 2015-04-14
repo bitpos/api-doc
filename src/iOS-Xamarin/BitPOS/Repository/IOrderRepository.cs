@@ -5,7 +5,7 @@ namespace BitPOS.Repository
 {
 	public interface IOrderRepository
 	{
-//		void AddOrder();
+		void AddOrder(IOrder order);
 //		IList<IOrder> All ();
 //		IOrder Select (String reference);
 	}

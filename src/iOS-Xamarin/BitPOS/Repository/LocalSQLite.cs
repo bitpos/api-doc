@@ -7,5 +7,9 @@ namespace BitPOS.Repository
 		public LocalSQLite ()
 		{
 		}
+
+		public void AddOrder(IOrder order)
+		{
+		}
 	}
 }

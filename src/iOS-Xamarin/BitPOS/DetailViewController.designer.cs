@@ -82,6 +82,10 @@ namespace BitPOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btn2_down (UIButton sender);
 
+		[Action ("btn3_down:")]
+		[GeneratedCode ("iOS Designer", "1.0")]
+		partial void btn3_down (UIButton sender);
+
 		[Action ("btn4_down:")]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btn4_down (UIButton sender);

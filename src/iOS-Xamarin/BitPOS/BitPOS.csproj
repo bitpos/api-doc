@@ -132,13 +132,18 @@
     <Compile Include="Providers\IExchangeProvider.cs" />
     <Compile Include="Providers\Mock.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Models\BitPOS\OrderResponse.cs" />
+    <Compile Include="Models\BitPOS\OrderRequest.cs" />
     <Compile Include="Models\Order.cs" />
-    <Compile Include="Models\OrderResponse.cs" />
+    <Compile Include="Providers\IOrderProvider.cs" />
+    <Compile Include="Providers\BitPOS.cs" />
+    <Compile Include="Providers\BlockChainInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Repository\" />
     <Folder Include="Models\" />
     <Folder Include="Providers\" />
+    <Folder Include="Models\BitPOS\" />
   </ItemGroup>
 </Project>

@@ -80,6 +80,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btn1_down:" destination="65" id="64" eventType="touchDown"/>
+                                    <action selector="btn3_down:" destination="JEX-9P-axG" id="188" eventType="touchDown"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="76" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
@@ -289,7 +290,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="Orders" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>

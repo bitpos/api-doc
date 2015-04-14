@@ -45,6 +45,13 @@ namespace BitPOS
 			Refresh();
 		}
 
+		partial void btn3_down (UIButton sender)
+		{
+			amount *= 10;
+			amount += 3;
+			Refresh();
+		}
+
 		partial void btn4_down (UIButton sender)
 		{
 			amount *= 10;
@@ -105,8 +112,8 @@ namespace BitPOS
 
 			//Note fields mandatory otherwise 500 error
 			Int32 amountInCents = Convert.ToInt32(amount * 100);
-			BitPOS.Models.Order order = new BitPOS.Models.Order() { amount = amountInCents, currency = "AUD", reference = "BitcoinBrisbane", description = "Test Ticket", failureURL="https://www.bitcoinbrisbane.com.au/fail/1", successURL="https://www.bitcoinbrisbane.com.au/greatsuccess/1" };
-			String json = JsonConvert.SerializeObject(order);
+			Models.BitPOS.OrderRequest request = new Models.BitPOS.OrderRequest() { amount = amountInCents, currency = "AUD", reference = "BitcoinBrisbane", description = "Test Ticket", failureURL="https://www.bitcoinbrisbane.com.au/fail/1", successURL="https://www.bitcoinbrisbane.com.au/greatsuccess/1" };
+			String json = JsonConvert.SerializeObject(request);
 
 			WebClient webClient = new WebClient() { Credentials = new NetworkCredential(Settings.Key, Settings.Password) };
 			webClient.Headers[HttpRequestHeader.Authorization] = string.Format("Basic {0}", base64credentials);
@@ -120,7 +127,10 @@ namespace BitPOS
 
 			String response = webClient.UploadString("https://rest.bitpos.me/services/webpay/order/create", json);
 
-			Models.OrderResponse orderResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.OrderResponse>(response);
+			Models.BitPOS.OrderResponse orderResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BitPOS.OrderResponse>(response);
+
+			UIAlertView alert = new UIAlertView ("Send BTC", String.Format("Send {0:0.0000} to {1}", orderResponse.satoshis, orderResponse.bitcoinAddress) , null, "Ok", null);
+			alert.Show ();
 		}
 			
 		public void SetDetailItem (object newDetailItem)
