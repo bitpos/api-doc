@@ -1,5 +1,5 @@
-.nib
-.exe
-.dll
-.mdb
-.pub
+*.pub
+*.mdb
+*.dll
+*.nib
+*.exe
