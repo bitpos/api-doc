@@ -9,6 +9,8 @@
     <RootNamespace>BitPOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
     <AssemblyName>BitPOS</AssemblyName>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -100,6 +102,7 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="MonoTouch.Dialog-1" />
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
@@ -138,6 +141,12 @@
     <Compile Include="Providers\IOrderProvider.cs" />
     <Compile Include="Providers\BitPOS.cs" />
     <Compile Include="Providers\BlockChainInfo.cs" />
+    <Compile Include="PopoverContentViewController.cs" />
+    <Compile Include="PopoverContentViewController.designer.cs">
+      <DependentUpon>PopoverContentViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Providers\IndependentReserve.cs" />
+    <Compile Include="Models\IndependentReserve\Response.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
@@ -145,5 +154,6 @@
     <Folder Include="Models\" />
     <Folder Include="Providers\" />
     <Folder Include="Models\BitPOS\" />
+    <Folder Include="Models\IndependentReserve\" />
   </ItemGroup>
 </Project>

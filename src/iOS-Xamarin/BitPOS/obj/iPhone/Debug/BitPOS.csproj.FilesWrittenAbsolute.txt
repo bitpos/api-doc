@@ -1,0 +1,16 @@
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/Xamarin.iOS,Version=v1.0.AssemblyAttribute.cs
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/ibtool/LaunchScreen.nib
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/ibtool/MainStoryboard.storyboardc/7bK-jq-Zjz-view-r7i-6Z-zg0.nib
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/ibtool/MainStoryboard.storyboardc/Info.plist
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/ibtool/MainStoryboard.storyboardc/JEX-9P-axG-view-svH-Pt-448.nib
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/ibtool/MainStoryboard.storyboardc/UIViewController-H1p-Uh-vWS.nib
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/actool/partial-info.plist
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/actool/asset-manifest.plist
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhone/Debug/SQLitePCL.raw.dll
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhone/Debug/SQLite-net.dll
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhone/Debug/Newtonsoft.Json.dll
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhone/Debug/BitPOS.exe.mdb
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/bin/iPhone/Debug/BitPOS.exe
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/BitPOS.exe
+/Users/lucascullen/Documents/GitHub/api-doc/src/iOS-Xamarin/BitPOS/obj/iPhone/Debug/BitPOS.exe.mdb

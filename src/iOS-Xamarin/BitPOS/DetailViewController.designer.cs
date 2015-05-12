@@ -64,6 +64,10 @@ namespace BitPOS
 
 		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
+		UIButton btnTest { get; set; }
+
+		[Outlet]
+		[GeneratedCode ("iOS Designer", "1.0")]
 		UILabel labAmount { get; set; }
 
 		[Outlet]
@@ -114,6 +118,12 @@ namespace BitPOS
 		[GeneratedCode ("iOS Designer", "1.0")]
 		partial void btnPay_down (UIButton sender);
 
+		[Outlet]
+		public UIPopoverController DetailViewPopover { get; set; }
+
+		[Outlet]
+		public NSObject LastTappedButton { get; set; }
+
 		void ReleaseDesignerOutlets ()
 		{
 			if (btn0 != null) {
@@ -163,6 +173,10 @@ namespace BitPOS
 			if (btnPay != null) {
 				btnPay.Dispose ();
 				btnPay = null;
+			}
+			if (btnTest != null) {
+				btnTest.Dispose ();
+				btnTest = null;
 			}
 			if (labAmount != null) {
 				labAmount.Dispose ();

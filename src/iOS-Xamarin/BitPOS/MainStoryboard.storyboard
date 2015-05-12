@@ -220,6 +220,12 @@
                                     <action selector="btnPay_down:" destination="JEX-9P-axG" id="159" eventType="touchDown"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="196" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="447" y="963" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="0.33725490196078434" green="0.592156862745098" blue="0.098039215686274508" alpha="1"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -241,6 +247,7 @@
                         <outlet property="btnDecimal" destination="133" id="name-outlet-133"/>
                         <outlet property="btn0" destination="140" id="name-outlet-140"/>
                         <outlet property="btnPay" destination="152" id="name-outlet-152"/>
+                        <outlet property="btnTest" destination="196" id="name-outlet-196"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

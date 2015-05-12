@@ -2,7 +2,7 @@
 using System.Text;
 using System.Drawing;
 using System.Collections.Generic;
-
+using CoreGraphics;
 using Foundation;
 using UIKit;
 using System.Security.Cryptography.X509Certificates;
@@ -98,6 +98,7 @@ namespace BitPOS
 
 		partial void btn0_down (UIButton sender)
 		{
+			ShowPopover(btn0);
 			amount *= 10;
 			Refresh();
 		}
@@ -131,9 +132,58 @@ namespace BitPOS
 
 			Models.BitPOS.OrderResponse orderResponse = Newtonsoft.Json.JsonConvert.DeserializeObject<Models.BitPOS.OrderResponse>(response);
 
+//			LoadingOverlay loadingOverlay = new LoadingOverlay();
+//
+//			// Determine the correct size to start the overlay (depending on device orientation)
+//			var bounds = UIScreen.MainScreen.Bounds; // portrait bounds
+//			if (UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeLeft || UIApplication.SharedApplication.StatusBarOrientation == UIInterfaceOrientation.LandscapeRight) {
+//				bounds.Size = new CGSize(bounds.Size.Height, bounds.Size.Width);
+//			}
+//			// show the loading overlay on the UI thread using the correct orientation sizing
+//			loadingOverlay = new LoadingOverlay (bounds);
+//			this.View.Add ( loadingOverlay.loadPop );
+
 			UIAlertView alert = new UIAlertView ("Send BTC", String.Format("Send {0:0.0000} to {1}", Decimal.Divide(orderResponse.satoshis, SATOSHI), orderResponse.bitcoinAddress) , null, "Ok", null);
 			alert.Show ();
+
+			//ShowPopover(btn0, orderResponse.bitcoinAddress, String.Format("bitcoin:{0}", orderResponse.bitcoinAddress));
 		}
+
+//		[Action ("showPopover:")]
+//		public void ShowPopover (NSObject sender, String message, String paymentUrl) {
+//			// Set the sender to a UIButton.
+//			UIButton tappedButton = (UIButton)sender;
+//
+//			//DetailViewPopover.
+//
+//			// Present the popover from the button that was tapped in the detail view.
+//			DetailViewPopover.PresentFromRect (tappedButton.Frame, View, UIPopoverArrowDirection.Any, true);
+//
+//			//todo
+//			// Set the last button tapped to the current button that was tapped.
+//			//LastTappedButton = sender;
+//		}
+
+		[Action ("showPopover:")]
+		public void ShowPopover (NSObject sender) {
+			// Set the sender to a UIButton.
+			UIButton tappedButton = (UIButton)sender;
+
+			// Present the popover from the button that was tapped in the detail view.
+			DetailViewPopover.PresentFromRect (tappedButton.Frame, View, UIPopoverArrowDirection.Any, true);
+
+			//todo
+			// Set the last button tapped to the current button that was tapped.
+			//LastTappedButton = sender;
+		}
+
+//		private async void ShowDetails()
+//		{
+//			var modalPage = new DetailsPage ();
+//			//await Navigation.PushModalAsync (modalPage);
+//			//Debug.WriteLine ("The modal page is now on screen");
+//			//var poppedPage = await Navigation.PopModalAsync ();
+//		}
 			
 		public void SetDetailItem (object newDetailItem)
 		{
@@ -165,12 +215,23 @@ namespace BitPOS
 
 		public override void ViewDidLoad ()
 		{
-			base.ViewDidLoad ();
+			try
+			{
+				base.ViewDidLoad ();
 
-			labExchange.Text = String.Format("Exchange rate ${0:0.000}", exchangeProvider.GetRate (1, "AUD"));
+				labExchange.Text = String.Format("Exchange rate ${0:0.000}", exchangeProvider.GetRate (1, "AUD"));
 
-			// Any additional setup after loading the view, typically from a nib.
-			ConfigureView ();
+				// Any additional setup after loading the view, typically from a nib.
+				ConfigureView ();
+
+
+				var content = new PopoverContentViewController ();
+				DetailViewPopover = new UIPopoverController (content);
+				DetailViewPopover.PopoverContentSize = new CGSize (320, 320);
+				DetailViewPopover.DidDismiss += delegate { LastTappedButton = null; };
+			}
+			catch (Exception ex) {
+			}
 		}
 
 		[Export ("splitViewController:willHideViewController:withBarButtonItem:forPopoverController:")]
