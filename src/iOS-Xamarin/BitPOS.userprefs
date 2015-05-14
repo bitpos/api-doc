@@ -1,0 +1,12 @@
+﻿<Properties StartupItem="BitPOS/BitPOS.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.IPad2.8.2" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="BitPOS/DetailViewController.cs">
+    <Files>
+      <File FileName="BitPOS/DetailViewController.cs" Line="18" Column="31" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
